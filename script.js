@@ -1,11 +1,9 @@
-// const titre = document.getElementById('titre').style.color ="green"; 
-
 //Je sélectionne et je stocke
-const btnRed = document.getElementById('btn-red'); 
+const btnRed = document.getElementById('btn-red');
 const btnBlue = document.getElementById('btn-blue');
 let titre = document.getElementById('titre');
 titre.style.color = "green";
-let compteur = 0; 
+let compteur = 0;
 
 
 //Je soumets le cercle rouge à une action 
@@ -17,14 +15,15 @@ btnBlue.addEventListener('click', function () {
     add();
 })
 
-setTimeout(function() {
+
+setTimeout(function () {
     console.log('fin du chrono !')
     btnRed.remove();
-    btnBlue;remove();
+    btnBlue.remove();
 }, 10000);
 
 
-function add() { 
+function add() {
 
     compteur = compteur + 1;
     console.log(compteur, "compteur après incrémentation");
