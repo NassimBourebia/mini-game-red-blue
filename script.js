@@ -1,15 +1,35 @@
-const titre = document.getElementById('titre').style.color ="green"; 
+// const titre = document.getElementById('titre').style.color ="green"; 
 
 //Je sélectionne et je stocke
 const btnRed = document.getElementById('btn-red'); 
+const btnBlue = document.getElementById('btn-blue');
+let titre = document.getElementById('titre');
+titre.style.color = "green";
 let compteur = 0; 
-console.log(compteur, "Compteur au démarrage");
+
 
 //Je soumets le cercle rouge à une action 
-btnRed.addEventListener('click', function(){
-    // console.log('cliqué');
-    //Ici l'action
-    //Incrémenter le compteur de 1 
-    compteur = compteur + 1
-    console.log(compteur, "compteur après incrémentation");
+btnRed.addEventListener('click', function () {
+
+    add()
 })
+btnBlue.addEventListener('click', function () {
+    add();
+})
+
+setTimeout(function() {
+    console.log('fin du chrono !')
+    btnRed.remove();
+    btnBlue;remove();
+}, 10000);
+
+
+function add() { 
+
+    compteur = compteur + 1;
+    console.log(compteur, "compteur après incrémentation");
+    titre.innerText = compteur;
+
+};
+
+
